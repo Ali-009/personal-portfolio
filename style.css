@@ -5,22 +5,72 @@
     --accent-color-1: #5D89C6;
 }
 
-/*colum-layout*/
+/*Text*/
+h1{
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+p{
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 0px;
+}
+
+/*flex columns*/
 body, .about-me-section, .project-section, .project-list{
     display: flex;
     flex-direction: column;
 }
 
-/*items centered inside a column*/
-.about-me-section > img, .project-list{
-    align-self: center;
-}
-
 body{
     background-color: var(--primary-color-1);
+    margin: 20px;
     align-items: center;
 }
 
-.project-section{
-    width: 100%;
+.about-me-section{
+    padding: 12px;
+    margin-bottom: 48px;
+    align-items: center;
 }
+
+.about-me-section > img{
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.about-me-section > p{
+    max-width: 288px;
+}
+
+
+.project-section{
+    padding: 12px;
+    width: 100%;
+    align-items: center;
+}
+
+.project-container{
+    margin-bottom: 64px;
+}
+
+.project-container > img{
+    border: solid black 3px;
+    border-radius: 10px;
+}
+
+.project-container > .project-data{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.project-container > .project-data > .project-name{
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+}
+
