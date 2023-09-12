@@ -1,0 +1,26 @@
+:root{
+    --primary-color-1: #F0E4D3;
+    --primary-color-2: #DAD0C2;
+    --primary-color-3: #C4B7A5;
+    --accent-color-1: #5D89C6;
+}
+
+/*colum-layout*/
+body, .about-me-section, .project-section, .project-list{
+    display: flex;
+    flex-direction: column;
+}
+
+/*items centered inside a column*/
+.about-me-section > img, .project-list{
+    align-self: center;
+}
+
+body{
+    background-color: var(--primary-color-1);
+    align-items: center;
+}
+
+.project-section{
+    width: 100%;
+}
