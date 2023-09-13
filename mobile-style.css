@@ -5,7 +5,7 @@
     --accent-color-1: #4d72a4;
 }
 /*Overall page structure*/
-html, body{
+html{
     height: 100%;
 }
 
@@ -13,17 +13,31 @@ body{
     min-height: 100%;
     background-color: var(--primary-color-3);
     margin: 0;
+    /*This helps ensure the page is flexible
+    regardless of viewport height*/
+    display: flex;
+    flex-direction: column;
 }
 
-main, header, footer{
-    max-width: 1200px;
+.page-container{
     margin: 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+}
+ 
+main, header, footer{
+    width: 100%;
 }
 
 main{
     background-color: var(--primary-color-1);
     align-items: center;
     padding: 92px 0px;
+    /*main content grows with the size of the viewport*/
+    flex-grow: 1;
 }
 
 header, footer{
@@ -31,7 +45,7 @@ header, footer{
     min-height: 92px;
 }
 
-/*header and footer styling*/
+/*header styling*/
 header{
     position: sticky;
     top: 0px;
@@ -61,6 +75,9 @@ header > nav > ul > li{
 header > nav > ul > li:hover{
     color: var(--accent-color-1);
 }
+
+/*footer styling*/
+
 
 /*Text*/
 h1{

@@ -1,5 +1,8 @@
 /*Tablets*/
 @media (min-width: 768px){
+    .page-container{
+        width: 100%;
+    }
     /*header alignment*/
     header > nav > ul{
         padding: 0px;
@@ -72,24 +75,27 @@
 }
 
 /*Desktop*/
-@media (min-width: 992px){
+@media (min-width: 1200px){
+    .page-container{
+        max-width: 1200px;
+    }
     /*header alignment*/
     header > nav > ul{
         padding: 0px;
         /*instead of making the navbar look smaller, on a larger screen, we can give the navbar more breathing room*/
-        min-width: calc(1048px + 24px);
+        min-width: calc(968px + 12px);
     }
     /*aligning the about-me-section with the header*/
     .about-me-section{
         /*aligning the about-me-section with the navbar*/
-        min-width: 1048px;
+        min-width: calc(968px + 12px);
         align-self: flex-start;
         margin: 0px auto 92px auto;
     }
     .project-list{
         display: grid;
         grid-template-columns: repeat(3, auto);
-        column-gap: 92px;
+        column-gap: 52px;
         row-gap: 92px;
     }
 }
