@@ -72,6 +72,13 @@
     .project-container > .project-data > .links > *{
         height: 28px;
     }
+
+    /*footer styling*/
+    footer > .contact-section{
+        width: 512px;
+        margin: 0 auto;
+        column-gap: 92px;
+    }
 }
 
 /*Desktop*/
