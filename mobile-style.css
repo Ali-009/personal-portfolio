@@ -2,7 +2,64 @@
     --primary-color-1: #F0E4D3;
     --primary-color-2: #DAD0C2;
     --primary-color-3: #C4B7A5;
-    --accent-color-1: #5D89C6;
+    --accent-color-1: #4d72a4;
+}
+/*Overall page structure*/
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: var(--primary-color-3);
+    margin: 0;
+}
+
+main, header, footer{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main{
+    min-height: 100%;
+    background-color: var(--primary-color-1);
+    align-items: center;
+    padding: 92px 0px;
+}
+
+header, footer{
+    background-color: var(--primary-color-2);
+    min-height: 92px;
+}
+
+/*header and footer styling*/
+header{
+    position: sticky;
+    top: 0px;
+}
+header > nav{
+    min-height: 92px;
+}
+header > nav > ul{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    max-width: 288px;
+    min-height: 92px;
+
+    display: flex;
+    gap:64px;
+    align-items: center;
+}
+header > nav > ul > li{
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+}
+header > nav > ul > li:hover{
+    color: var(--accent-color-1);
 }
 
 /*Text*/
@@ -29,17 +86,11 @@ p{
 }
 
 /*flex columns*/
-body, .about-me-section, .project-section, .project-list{
+main, .about-me-section, .project-section, .project-list{
     display: flex;
     flex-direction: column;
 }
-
-body{
-    background-color: var(--primary-color-1);
-    margin: 20px;
-    align-items: center;
-}
-
+/*page sections*/
 .about-me-section{
     padding: 12px;
     margin-bottom: 48px;
@@ -62,11 +113,13 @@ body{
     align-items: center;
 }
 
+/*project thumbnails*/
 .project-container{
     margin-bottom: 64px;
 }
 
 .project-container > img{
+    box-sizing: border-box;
     border: solid black 3px;
     border-radius: 10px;
 }
@@ -74,6 +127,7 @@ body{
 .project-container > .project-data{
     display: flex;
     justify-content: space-between;
+    padding: 0px 12px;
     margin-top: 8px;
 }
 
@@ -81,4 +135,3 @@ body{
     font-family: 'Roboto Mono';
     font-weight: 700;
 }
-

@@ -1,11 +1,22 @@
 /*Tablets*/
 @media (min-width: 768px){
+    /*header alignment*/
+    header > nav > ul{
+        padding: 0px;
+        /*instead of making the navbar look smaller, on a larger screen, we can give the navbar more breathing room*/
+        min-width: calc(668px + 24px);
+    }
+
     .about-me-section{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: min-content max-content;
         grid-template-rows: auto auto;
         column-gap: 48px;
-        margin-bottom: 92px;       
+        
+        /*aligning the about-me-section with the navbar*/
+        min-width: 668px;
+        align-self: flex-start;
+        margin: 0px auto 92px auto;
     }
     .about-me-section > img {
         margin-bottom: 0px;
@@ -41,9 +52,44 @@
         column-gap: 92px;
         row-gap: 92px;
     }
+
+    .project-container > .project-data{
+        margin-top: 12px;
+    }
+
+    .project-container > .project-data > .project-name{
+        font-size: 20px;
+    }
+
+    .project-container > .project-data > .links{
+        display: flex;
+        gap: 16px;
+    }
+
+    .project-container > .project-data > .links > *{
+        height: 28px;
+    }
 }
 
 /*Desktop*/
 @media (min-width: 992px){
-
+    /*header alignment*/
+    header > nav > ul{
+        padding: 0px;
+        /*instead of making the navbar look smaller, on a larger screen, we can give the navbar more breathing room*/
+        min-width: calc(1048px + 24px);
+    }
+    /*aligning the about-me-section with the header*/
+    .about-me-section{
+        /*aligning the about-me-section with the navbar*/
+        min-width: 1048px;
+        align-self: flex-start;
+        margin: 0px auto 92px auto;
+    }
+    .project-list{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 92px;
+        row-gap: 92px;
+    }
 }
