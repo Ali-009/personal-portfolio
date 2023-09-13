@@ -10,6 +10,7 @@ html, body{
 }
 
 body{
+    min-height: 100%;
     background-color: var(--primary-color-3);
     margin: 0;
 }
@@ -20,7 +21,6 @@ main, header, footer{
 }
 
 main{
-    min-height: 100%;
     background-color: var(--primary-color-1);
     align-items: center;
     padding: 92px 0px;
