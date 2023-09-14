@@ -2,7 +2,7 @@
     --primary-color-1: #F0E4D3;
     --primary-color-2: #DAD0C2;
     --primary-color-3: #C4B7A5;
-    --accent-color-1: #4d72a4;
+    --accent-color-1: #3A4873;
 }
 /*Overall page structure*/
 html{
@@ -72,7 +72,8 @@ header > nav > ul > li{
     font-size: 24px;
     font-weight: 700;
 }
-header > nav > ul > li:hover{
+header > nav > ul > li:hover,
+header > nav > ul > li > a:focus{
     color: var(--accent-color-1);
 }
 /*style reset for navbar links*/
@@ -188,6 +189,11 @@ main, .about-me-section, .project-section, .project-list{
 .project-container > .project-data > .links{
     display: flex;
     gap: 16px;
+}
+
+.project-container > .project-data > .links > a:hover > svg,
+.project-container > .project-data > .links > a:focus > svg{
+    fill: var(--accent-color-1);
 }
 
 
