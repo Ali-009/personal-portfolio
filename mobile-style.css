@@ -162,6 +162,10 @@ main, .about-me-section, .project-section, .project-list{
     box-sizing: border-box;
     border: solid black 3px;
     border-radius: 10px;
+
+    width: 288px;
+    height: 176px;
+    object-fit: fill;
 }
 
 .project-container > .project-data{
@@ -175,3 +179,10 @@ main, .about-me-section, .project-section, .project-list{
     font-family: 'Roboto Mono';
     font-weight: 700;
 }
+
+.project-container > .project-data > .links{
+    display: flex;
+    gap: 16px;
+}
+
+

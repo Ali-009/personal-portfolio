@@ -6,7 +6,8 @@
     /*header alignment*/
     header > nav > ul{
         padding: 0px;
-        /*instead of making the navbar look smaller, on a larger screen, we can give the navbar more breathing room*/
+        /*instead of making the navbar look smaller,
+        on a larger screen, we can give the navbar more breathing room*/
         min-width: calc(668px + 24px);
     }
 
@@ -64,11 +65,6 @@
         font-size: 20px;
     }
 
-    .project-container > .project-data > .links{
-        display: flex;
-        gap: 16px;
-    }
-
     .project-container > .project-data > .links > *{
         height: 28px;
     }
@@ -89,7 +85,8 @@
     /*header alignment*/
     header > nav > ul{
         padding: 0px;
-        /*instead of making the navbar look smaller, on a larger screen, we can give the navbar more breathing room*/
+        /*instead of making the navbar look smaller,
+        on a larger screen, we can give the navbar more breathing room*/
         min-width: calc(968px + 12px);
     }
     /*aligning the about-me-section with the header*/
