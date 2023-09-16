@@ -131,6 +131,14 @@ p, .contact-section > .contact-me-message,
     margin-top: 0px;
 }
 
+.project-container > .project-note{
+    max-width: 288px;
+    box-sizing: border-box;
+    padding: 0px 12px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
 /*flex columns*/
 main, .about-me-section, .project-section, .project-list{
     display: flex;
@@ -172,6 +180,51 @@ main, .about-me-section, .project-section, .project-list{
     width: 288px;
     height: 176px;
     object-fit: fill;
+}
+
+/*Pet Carousel styling*/
+.project-container > .frame-container{
+    box-sizing: border-box;
+    border: solid black 3px;
+    border-radius: 10px;
+    width: 288px;
+    height: 176px;
+    overflow: hidden;
+}
+
+.project-container > .frame-container > .frame > img{
+    width: 288px;
+    height: 176px;
+    object-fit: fill;
+}
+
+.project-container > .frame-container > .frame{
+    display: flex;
+    animation-name: animate-pet-carousel;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate-pet-carousel{
+    /*transition animations last 5% of the animation-duration*/
+    /*the frame stays still for 20% of the animation-duration*/
+    from, 20%{
+        transform: translateX(0%);
+    }
+    25%, 45%{
+        transform: translateX(-288px)
+    }
+    50%, 70%{
+        transform: translateX(calc(-288px * 2))
+    }
+    75%, 95%{
+        transform: translateX(calc(-288px * 3))
+    }
+    to{
+        transform: translateX(0%);
+    }
 }
 
 .project-container > .project-data{
