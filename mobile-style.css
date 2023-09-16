@@ -2,7 +2,7 @@
     --primary-color-1: #F0E4D3;
     --primary-color-2: #DAD0C2;
     --primary-color-3: #C4B7A5;
-    --accent-color-1: #3A4873;
+    --accent-color-1: #254195;
 }
 /*Overall page structure*/
 html{
@@ -87,25 +87,9 @@ header > nav > ul > li > a{
 /*footer styling*/
 footer > .contact-section{
     padding: 24px 24px;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    column-gap: 32px;
-}
-
-.contact-section > h1{
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-.contact-section > .contact-me-message{
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-.contact-section > .contact-details{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 
