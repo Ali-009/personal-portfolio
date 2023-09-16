@@ -49,6 +49,8 @@ header, footer{
 header{
     position: sticky;
     top: 0px;
+    /*To prevent the CSS animation from being drawn over the header*/
+    z-index: 2;
 }
 header > nav{
     min-height: 92px;
@@ -162,7 +164,6 @@ main, .about-me-section, .project-section, .project-list{
 
 
 .project-section{
-    padding: 12px;
     width: 100%;
     align-items: center;
 }
