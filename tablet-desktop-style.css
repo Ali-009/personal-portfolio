@@ -66,7 +66,8 @@
     }
 
     .project-container > .project-data > .links > *{
-        height: 28px;
+        height: 24px;
+        width: 24px;
     }
 
     /*footer styling*/

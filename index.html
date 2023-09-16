@@ -48,7 +48,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="project-container">
+                    <div class="project-container  pet-carousel-project">
                         <div class="frame-container">
                             <div class="frame">
                                 <img src="./assets/dog-yellow-flowers.jpg" alt="A Dog in a Field of Yellow of Flowers">
@@ -60,6 +60,12 @@
                         <div class="project-data">
                             <span class="project-name">Pet Carousel</span>
                             <span class="links">
+                                <button class="animation-pause-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                                        <title>Pause Animation</title>
+                                        <path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                    </svg>
+                                </button>
                                 <a href="https://github.com/Ali-009/carousel-demo" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                                     <title>View Pet Carousel Code</title>
                                     <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg></a>
@@ -71,7 +77,6 @@
                                 </a>
                             </span>
                         </div>
-                        <p class="project-note">I originally implemented the animation using JS years ago. The one on this site uses CSS3 instead. Far less code involved.</p>
                     </div>
                     <div class="project-container">
                         <img src="./assets/dashboard-preview.png" alt="Dashboard Project Preview">
@@ -145,5 +150,20 @@
             </section>
         </footer>
     </div>
+    <script>
+        const animationPauseButton = document.querySelector('.animation-pause-button')
+        animationPauseButton.addEventListener('click', (e) => {
+            pauseIcon = document.querySelector('.animation-pause-button > svg') 
+            console.log(pauseIcon.style.fill)
+            if(pauseIcon.style.fill === ''){
+                pauseIcon.style.fill = "var(--accent-color-1)"
+            } else {
+                pauseIcon.style.fill = ''
+            }
+            const animationFrame = document.querySelector('.frame');
+            animationFrame.classList.toggle('paused-frame');
+
+        })
+    </script>
 </body>
 </html>
