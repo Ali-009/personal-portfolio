@@ -22,7 +22,7 @@
         align-self: flex-start;
         margin: 0px auto 92px auto;
     }
-    .about-me-section > img {
+    .about-me-section > figure {
         margin-bottom: 0px;
         grid-column: 1 / 2;
         grid-row: 1 / 3;
@@ -35,6 +35,7 @@
     .about-me-section > p {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
+        align-self: start;
     }
 
     .project-section{
